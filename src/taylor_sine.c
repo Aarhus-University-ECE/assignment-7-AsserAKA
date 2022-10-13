@@ -1,4 +1,4 @@
-//#include "taylor_sine.h"
+#include "taylor_sine.h"
 #include <math.h>
 #include <assert.h>
 #include <stdio.h>
