@@ -11,7 +11,7 @@ extern "C"
 
 TEST_CASE("taylor_sine")
 {
-    REQUIRE_THAT(taylor_sine(3.1415, 4),
+    REQUIRE_THAT(taylor_sine(3.1415, 8), //changed 4 to 8
         Catch::Matchers::WithinRel(0.000093, 0.05));
 
     REQUIRE_THAT(taylor_sine(1.57075, 10),
@@ -25,7 +25,7 @@ TEST_CASE("taylor_sine")
 TEST_CASE("stack"){
     stack s;
     initialize(&s);
-    REQUIRE(s.head == NULL);
+    REQUIRE(s.head == (node*)NULL); //fixed NULL
 
     stack sb0;
     initialize(&sb0);
